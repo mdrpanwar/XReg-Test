@@ -37,7 +37,7 @@ We remove those products from the dataset which do not aid the learning process.
 The cycle repeats and we keep removing products until convergence as done in `type3Removal(..)` function in `./filter_format.py`.
 
 We then split this dataset into train and test set files containing rows like the following JSON object:
-```json
+```
 {"id": productId, "description": product description, "related_products" : [indices of related products]}
 ```
 
