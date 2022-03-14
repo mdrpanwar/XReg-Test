@@ -239,7 +239,7 @@ m = 200 --> 20.8568
 ## Best Model
 We observe the best P@1 value to be 23.1679 which occurs when we change the value of `kleaf` hyper-parameter from 0 (default) to 1.
 
-All files in this repository (`./filter_format.py`, `./sparse_bow_features_from_raw_data_new.py` and `./features_labels/*`) correspond to this version.
+All files in this repository (`./filter_format.py`, `./sparse_bow_features_from_raw_data_new.py`, `./features_labels/*` and `./xreg_model/*`) correspond to this version.
 
 
 Detailed Metrics:
