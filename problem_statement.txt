@@ -1,0 +1,20 @@
+In this problem, you are expected to: 
+(1) create a product-to-product recommendation dataset from Amazon raw data
+(2) run a Extreme Classification (XC) algorithm called Parabel on this dataset & evaluate the performance of the algorithm on a test dataset using standard metrics like Precision@k
+(3) send a report of each step you followed/decision you took along with final precision numbers, training time and prediction time.
+
+For this exercise, you are expected to show as much independence as possible. You can refer to resources available in XC repository (http://manikvarma.org/downloads/XC/XMLRepository.html) such as research papers, code bases etc. for clarifications.
+
+(1) Create an product-to-product recommendation dataset
+    "related.txt" file contains which products are frequently co-purchased with which other products. If B is frequently co-purchased with A, then B is a label of A in XC.
+    "sample_descriptions.txt" contains descriptions of a sample of products on Amazon mapped to their IDs. These will be your set of data points, i.e. this will be divided into training and test points. Note that "related.txt" might contain many other products which don't occur either as data points (i.e. also occur in sample_descriptions.txt) or their labels; ignore such products in this experiment.
+    Using these 2 files, create a XC dataset. A sample dataset format is given in XReg-master/Datasets/EURLex-4K. Create a similar dataset from the Amazon product-to-product dataset where both data points and labels are products. Note that you can delete those data points with no labels and labels with no data points as they don't give any information to the learning process.
+    Use bag-of-words feature vector for data points. Follow the standard data pre-processing steps like stemming, stop-removal, removing very rare words, tf-idf weighting etc.
+    Make sure the dataset format is the same as in the sample EURLex-4K dataset
+    Partition the dataset into 80/20 split of training/test datasets
+
+(2) Run Parabel on this dataset and get evaluation metrics
+    An implementation of Parabel (called XReg) is given in the downloaded zip. Read up the READMEs in there to understand how to train and predict using Parabel. The typical precisions should be in the range of 20-40 precision@1. However, in case you get very small or strange-looking precisions, then it indicates a bug in the code. Inform me in such a case, and then proceed to debug the code. '
+
+(3) A major objective of this exercise is to test your machine learning experimentation skills. Try to maximize the precisions achieved by the model 
+    through hyper-parameter tuning/better feature pre-processing/any other innovative approaches you can think of. Send in a detailed report of the steps you have followed for dataset creation, statistics of the generated dataset, debugging details, and model improvements along with the effects these improvements had on precision values.
