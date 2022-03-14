@@ -133,7 +133,7 @@ _Splits were not created randomly but instead created in a way that ensured that
 While we cannot ensure that each label gets covered, we can maximize the label coverage within our training set.
 We do so by using the `getMaxLabelCoverageSplit(..)` method in `./filter_format.py` which maximizes the label coverage by preferentially picking those data points in train set that have more labels (i.e. more related products).
 
-This results in a P@1 of 20.9695.
+This change increases label coverage from 82.06% (random split) to 91.83% and results in a P@1 of 20.9695.
 ```
 pointwise metrics
 prec
